@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/* Estilos gerais */
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Fundo preto suave */
+    color: #e0e0e0; /* Texto branco acinzentado para melhor legibilidade */
+    line-height: 1.6;
+  }
+
+/* Estilos da Navegação */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1c1c1c;
+    color: #00bfa5;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transição suave */
+    z-index: 1000;
+    visibility: hidden; /* Inicialmente invisível */
+    overflow-x: auto;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #00bfa5;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: white;
+  }
+  
+  /* Classe para mostrar a navegação com transição suave */
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible; /* Torna visível */
+  }
+  
+  /* Classe para esconder a navegação com transição suave */
+  .hide {
+    opacity: 0;
+    transform: translateY(-100%);
+    visibility: hidden; /* Torna invisível */
+  }
+  
+  
+  span {
+    color:#00bfa5;
+  }
+  
+  
+  /* Estilo do Cabeçalho */
+  #cabecalho {
+    background-color: #1c1c1c; /* Preto mais escuro para contraste */
+    color: #00bfa5; /* Verde-água para os textos de destaque */
+    padding: 30px;
+    text-align: center;
+    border-bottom: 3px solid #00bfa5;
+  }
+  
+  #cabecalho h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  #cabecalho p {
+    margin: 5px 0;
+  }
+
+  #cabecalho p a {
+    text-decoration:none;
+    color:white;
+  }
+
+  #cabecalho p a:hover {
+    text-decoration:none;
+    color:black;
+  }
+  
+  .contato {
+    margin-top: 15px;
+    font-size: 0.9em;
+  }
+  
+  /* Estilo Principal */
+  #conteudo-principal {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #282828;
+  }
+  
+  /* Estilo das Seções */
+  .secao {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #1e1e1e; /* Cor de fundo diferenciada para seções */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+
+  .secao:hover {
+    transform:translate(0px, -6px);
+    cursor:pointer;
+    transition:  transform .6s ease;
+  }
+  
+  .secao h2 {
+    margin-top: 0;
+    color: #00bfa5; /* Verde-água para títulos das seções */
+    border-bottom: 2px solid #00bfa5;
+    padding-bottom: 5px;
+  }
+  
+  /* Estilo da Lista de Habilidades */
+  #habilidades ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #habilidades li {
+    background-color: #282828; /* Fundo mais escuro para itens da lista */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  #habilidades li:hover {
+    padding:15px;
+    transition:padding .4s ease;
+  }
+  
+  /* Estilo do Rodapé */
+  #rodape {
+    background-color: #1c1c1c;
+    color: #00bfa5;
+    text-align: center;
+    padding: 15px;
+    border-top: 3px solid #00bfa5;
+  }
+  
+  /* Media Queries para Responsividade */
+
+  @media screen and (min-width: 1200px) {
+    #conteudo-principal {
+      padding: 30px;
+    }
+    .secao {
+      padding: 15px;
+    }
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-left:20px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) and (min-width: 992px) {
+    #conteudo-principal {
+      padding: 30px;
+    }
+    .secao {
+      padding: 15px;
+    }
+    nav ul {
+        max-width: 800px;
+        margin:0px auto;
+        justify-content: center;
+    }
+  }
+  
+  @media screen and (max-width: 992px) and (min-width: 768px) {
+    #conteudo-principal {
+      padding: 20px;
+    }
+    .secao {
+      padding: 10px;
+    }
+
+    nav ul {
+        max-width: 800px;
+        margin:0px auto;
+        justify-content: center;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #conteudo-principal {
+      padding: 15px;
+    }
+    .secao {
+      padding: 8px;
+    }
+    #cabecalho h1 {
+      font-size: 1.5em;
+    }
+    nav ul {
+        max-width: 800px;
+        margin:0px auto;
+        justify-content: center;
+    }
+  }
+  
+  @media print {
+    nav {
+      display:none;
+    }
+    footer {
+      display:none;
+    }
+    .secao {
+      margin:50px auto;
+    }
+  }
