@@ -201,10 +201,6 @@ nav {
       padding: 10px;
     }
 
-    nav {
-      display:block;
-    }
-
     nav ul {
         max-width: 800px;
         margin:0px auto;
