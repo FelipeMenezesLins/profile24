@@ -200,6 +200,9 @@ nav {
     .secao {
       padding: 10px;
     }
+    nav {
+      display:block;
+    }
 
     nav ul {
         max-width: 800px;
@@ -218,11 +221,10 @@ nav {
     #cabecalho h1 {
       font-size: 1.5em;
     }
-    nav ul {
-        max-width: 800px;
-        margin:0px auto;
-        justify-content: center;
+    nav {
+      display:none;
     }
+
   }
   
   @media print {
