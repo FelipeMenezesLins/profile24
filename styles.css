@@ -24,6 +24,7 @@ nav {
     z-index: 1000;
     visibility: hidden; /* Inicialmente invisível */
     overflow-x: auto;
+    display:none;
   }
   
   nav ul {
@@ -163,6 +164,9 @@ nav {
     .secao {
       padding: 15px;
     }
+    nav {
+      display:block;
+    }
     nav ul {
         justify-content: center;
     }
@@ -179,6 +183,9 @@ nav {
     .secao {
       padding: 15px;
     }
+    nav {
+      display:block;
+    }
     nav ul {
         max-width: 800px;
         margin:0px auto;
@@ -192,6 +199,10 @@ nav {
     }
     .secao {
       padding: 10px;
+    }
+
+    nav {
+      display:block;
     }
 
     nav ul {
